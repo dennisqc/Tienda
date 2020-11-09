@@ -10,7 +10,7 @@ require_once 'Controlador/controlproducto.php';
 $aeamano = new ControlProducto;
 $aeamano -> ListarProductosC();
 
-
+aea
 
 require_once 'Controlador/controlproducto.php';
 
