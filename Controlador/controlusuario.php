@@ -32,13 +32,21 @@ class ControlUsuario
             //  return $resultado->fetchAll(PDO::FETCH_OBJ);
             $numero_registro = $resultado->rowCount();
             if ($numero_registro != 0) {
-               // echo "holi";
-                header("Location: ../Vista/formproductos.php") ;
+                // echo "holi";
+                header("Location: ../Vista/formproductos.php");
             } else {
                 echo "fuera chupapinga ";
             }
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
+    }
+
+    public function ListarLoginC()
+    {
+        $Usuario = new usuario();
+        $resultado = $Usuario->ListarLoginM();
+        $arrayResultado = $resultado->fetchAll(pdo::FETCH_OBJ);
+        return $arrayResultado;
     }
 }

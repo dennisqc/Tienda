@@ -1,17 +1,13 @@
-<?php
+<?php require_once '../Controlador/controlproducto.php';
+        $categoria = new ControlProducto;
+        $ListarCategoria = $categoria->ListarCategoriaC();
+        foreach ($ListarCategoria as $tipo) :     ?>
 
+                <?php echo $tipo->id_categoria ?>
+                    <?php echo $tipo->categoria  ?>
+              
 
-
-
-require_once '../Controlador/controlproducto.php';
-
-
-
-
-$arrayP = new ControlProducto;
-print_r($arrayResultado = $arrayP->ListarProductosC());
-//$arrayResultado = $arrayP->ListarProductoC(2);
-
- //echo $arrayResultado->producto;
-    
-
+            </select>
+        <?php
+        endforeach;   //ACABANDO EL BUCLE
+        ?>

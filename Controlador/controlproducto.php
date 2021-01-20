@@ -17,13 +17,19 @@ class ControlProducto
         $resultado = $validar->ListarProductos();
         //$resultado=$this->model->ListarProductos();      
         $arrayResultado = $resultado->fetchAll(pdo::FETCH_OBJ);
+        //obj te da un stdClass Object 
+        //assoc te da un array 
         return $arrayResultado;
     }
 
-    public function ActualizarProductoC(){
-        $resultado = new producto();
+    public function ActualizarProductoC()
+    {
+        /* $resultado = new producto();
         $res = $resultado->ActualizarProducto();
-        $res ->fetch();
+        $lol=$res->fetch(pdo::FETCH_OBJ);
+        return $lol;*/
+        $resultado = new producto();
+        $res = $resultado->ActualizarProducto()->fetch(pdo::FETCH_OBJ);
         return $res;
     }
     /*public function Guardar2()
@@ -39,7 +45,20 @@ class ControlProducto
     public function ListarProductoC($id_producto)
     {
         $resultado = $this->model->ListarProducto($id_producto);
-        $arrayResultado = $resultado->fetch(pdo::FETCH_OBJ );
+        $arrayResultado = $resultado->fetch(pdo::FETCH_OBJ);
         return $arrayResultado;
+    }
+
+    public function ListarCategoriaC()
+    {
+        //referencia en ActualizarProductoC
+        $resultado = new producto();
+        $res = $resultado->ListarCategoria();
+        $ArrayResultado = $res->fetchAll(pdo::FETCH_OBJ);
+        return $ArrayResultado;
+        //el pdo::FETCH_OBJ los convierte en objeto sino se usa nos da un array 
+        /* $resultado = $this->model->ListarCategoria();
+        $arrayResultado = $resultado->fetchAll(pdo::FETCH_OBJ);      
+        return $arrayResultado;*/
     }
 }

@@ -20,10 +20,6 @@ switch ($_GET['opcion']) {
 
 
 
-
-
-
-
     case 'eliminar':
 
         // recibi el id del formulario lo podia mandar a control producto pero decidi mandarlo directo
@@ -44,13 +40,14 @@ switch ($_GET['opcion']) {
         // require_once 'controlproducto.php';
         $producto = new Producto;
         $producto->producto = $_POST['producto'];
-
+        $producto->id_categoria = $_POST['categoria'];
         $producto->cantidad = $_POST['cantidad'];
         $producto->precio = $_POST['precio'];
         $producto->id_producto = $_POST['id'];
+
         // echo "$producto->idproducto";
-        
-        $producto->id_producto > 0 ? $producto->ActualizarProducto() :$producto->Nuevoproducto();
+
+        $producto->id_producto > 0 ? $producto->ActualizarProducto() : $producto->Nuevoproducto();
         //  $producto = new ControlProducto;
 
 

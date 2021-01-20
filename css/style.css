@@ -1,0 +1,44 @@
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+  }
+
+[href] {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+
+  width: 100%;
+
+  font-size: 17px;
+  text-align: center;
+  border-radius: 15px;
+}
+table th {
+  padding: 10px;
+  background: #3d7ba8;
+  color: #fff;
+}
+table td {
+  padding: 5px;
+}
+.tablas{
+	object-position: center;
+}
+
+h1{
+	display: inline-block;
+}
+.titulo {
+	font-family: 'arial';
+    font-weight: bold;
+    letter-spacing: 2px;
+  
+}
+
+.nuevo{
+	width: auto;
+	
+}

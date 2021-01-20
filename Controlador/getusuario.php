@@ -7,8 +7,6 @@ switch ($_GET['opcion']) {
 
         require_once 'controlusuario.php';
         $usuariocontrolador = new ControlUsuario;
-        $usuariocontrolador->ValidarLoginC($usuario,$pass);
+        $usuariocontrolador->ValidarLoginC($usuario, $pass);
         break;
-
-
 }

@@ -10,26 +10,19 @@ class conexiones
     private $dbName = 'Tienda';
     private $charset = 'utf8';
 
-    protected function conexion()
-  
+    public function conexion()
+
     {
         /*$conexion=new mysqli($this->host,$this->user,$this->pass,$this->dbName);
 */
         try {
             $conexion = new PDO("{$this->driver}:host={$this->host};dbname={$this->dbName};charset={$this->charset}", $this->user, $this->pass);
-           $conexion->setAttribute(pdo::ATTR_ERRMODE, pdo::ERRMODE_EXCEPTION);
+            $conexion->setAttribute(pdo::ATTR_ERRMODE, pdo::ERRMODE_EXCEPTION);
             return $conexion;
-           // echo "ok";
+            // echo "ok";
         } catch (PDOException $e) {
-           echo $e->getMessage();
-          // die($e->getMessage());
+            echo $e->getMessage();
+            // die($e->getMessage());
         }
     }
-
-    
-
 }
-
-
-
-?>

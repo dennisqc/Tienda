@@ -15,4 +15,6 @@ require_once 'Controlador/controlproducto.php';
 
 $aeamano = new ControlProducto;
 print_r($aeamano->ActualizarProductoC("Core i5", "200", "1000",1));*/
+
+
 ?>
