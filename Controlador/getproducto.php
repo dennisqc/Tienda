@@ -30,9 +30,6 @@ switch ($_GET['opcion']) {
         $eliminar->EliminarProducto($id_producto);
         header("Location: ../vista/formproductos.php");
 
-
-
-
         break;
 
     case 'guardar':
