@@ -14,7 +14,7 @@
         </div>
     </div>
     <nav>
-        <a href="ListarUsarios.php">Listar Usuarios</a>
+        <a href="ListarUsuarios.php">Listar Usuarios</a>
         <a href="formproductos.php">Listar Productos</a>
         <a href="">Listar categorias</a>
         <a href="">Proforma</a>

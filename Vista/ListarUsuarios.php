@@ -48,21 +48,27 @@
                         <td><?php echo  $usuario->telefono  ?></td>
                         <td><?php echo  $usuario->Direccion  ?></td>
                         <td><?php echo  $usuario->cargo  ?></td>
-                        <td>Estado <?php echo $usuario->id_cargo  ?> </td>
+                        <td>Estado <?php echo $usuario->estado ?> </td>
                         <td>Editar <?php echo $usuario->id_usuario  ?> </td>
+                        <td>
+                            <form action="../Controlador/getusuario.php?opcion=editar" method="post">
+                                <input type="hidden" value="<?php echo $usuario->id_usuario ?>" name="">
+                                <input type="button" value="Editar">
+                            </form>
+                        </td>
                         <td>
 
 
-                            <form action="" method="post">
+                            <form action="../Controlador/getusuario.php?opcion=estado" method="post">
 
                                 <input type="hidden" name="id_usuario" id="" class="BtnAc" value="<?php echo $usuario->id_usuario ?>">
-                                <input type="hidden" name="estado" id="" class="BtnNA" value="">
+                                <input type="hidden" name="estado" id="" class="BtnNA" value="<?php echo $usuario->estado ?>">
 
                                 <?php if ($usuario->estado == 1) { ?>
-                                    <input type="button" value="Activo">
+                                    <input type="submit" value="Activo">
                                 <?php } else {
                                 ?>
-                                    <input type="button" value="No Activo">
+                                    <input type="submit" value="No Activo">
                                 <?php } ?>
                             </form>
                         </td>

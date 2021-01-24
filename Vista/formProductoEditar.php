@@ -31,10 +31,6 @@
         <label for="Precio">Precio</label>
         <input type="text" name="precio" value="<?php echo $res->precio;  ?>" id="">
         <label for="Tipo">Tipo de Producto</label>
-
-
-
-
         <select name="categoria" id="">
             <option value="">---Elegir Categoria ----</option>
             <?php require_once '../Controlador/controlproducto.php';

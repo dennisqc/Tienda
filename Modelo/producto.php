@@ -92,10 +92,17 @@ class producto extends conexiones
 
         return $consulta;
     }
-    public function EliminarProducto($id_producto)
+    public function EliminarProductoo($id_producto)
     {
         $consulta = $this->conexion->prepare("DELETE FROM producto where id_producto=?");
         $consulta->execute(array($id_producto));
+        return $consulta;
+    }
+
+    public function EliminarProducto()
+    {
+        $consulta = $this->conexion->prepare("DELETE FROM producto where id_producto=?");
+        $consulta->execute(array($this->id_producto));
         return $consulta;
     }
 

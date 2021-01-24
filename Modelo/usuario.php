@@ -75,24 +75,22 @@ class usuario extends conexiones
     }
 
     /*Activar Login */
-    public function ActivarLogin()
+    public function ActivarLoginM($id_usuario)
     {
         $consulta = $this->conexion->prepare("UPDATE usuario  set estado = 1 where id_usuario =? ");
-        $consulta->execute(array($this->id_usuario));
+        $consulta->execute(array($id_usuario));
         return $consulta;
     }
     /*Desactivar Login */
-    public function DesactivarLogin()
+    public function DesactivarLoginM($id_usuario)
     {
         $consulta = $this->conexion->prepare("UPDATE usuario  set estado = 0 where id_usuario =? ");
-        $consulta->execute(array($this->id_usuario));
+        $consulta->execute(array($id_usuario));
         return $consulta;
     }
 
 
     public function EditarCargo()
     {
-
-        
     }
 }
